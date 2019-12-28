@@ -1,0 +1,8 @@
+ #Splitting Strings on Any of Multiple Delimiters
+ 
+line = 'asdf fjdk; afed, fjek,asdf,      foo'
+
+importre
+
+re.split(r'[;,\s]\s*', line)
+['asdf', 'fjdk', 'afed', 'fjek', 'asdf', 'foo']
