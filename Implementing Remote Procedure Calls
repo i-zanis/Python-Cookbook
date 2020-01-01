@@ -1,0 +1,12 @@
+# jsonrpcserver.py
+importjson
+class RPCHandler:
+  def __init__(self):
+    self._functions = { }460 
+      def register_function(self, func):
+        self._functions[func.__name__] = funcdef handle_connection(self, connection):
+          try:while True:
+            # Receive a message
+            func_name, args, kwargs = json.loads(connection.recv())
+            # Run the RPC and send a responsetry:
+            r = self._functions[func_name](*args,**kwargs)connection.send(json.dumps(r))exceptExceptionas e:connection.send(json.dumps(str(e)))exceptEOFError:pass# jsonrpcclient.pyimportjsonclassRPCProxy:def __init__(self, connection):self._connection = connectiondef __getattr__(self, name):def do_rpc(*args, **kwargs):self._connection.send(json.dumps((name, args, kwargs)))result = json.loads(self._connection.recv())return resultreturn do_rpc
