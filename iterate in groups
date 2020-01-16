@@ -1,0 +1,6 @@
+# Iterate in groups
+
+for date, itemsin groupby(rows, key=itemgetter('date')):
+  print(date)
+   for i in items:
+    print('    ', i)
