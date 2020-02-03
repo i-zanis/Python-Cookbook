@@ -25,6 +25,7 @@ class PrinterAccount(): #simulates printer account for UWL printers
       else: self.paper_size = 10
       print(self.name + " is printing " + str(num_pages) + is_colour + paper_size + " pages")
 
+
 account1 = PrinterAccount("Levi", "74893456", 100, 0)
 account1.print_balance()
 account1.print_document(2, "A3", "colour")
