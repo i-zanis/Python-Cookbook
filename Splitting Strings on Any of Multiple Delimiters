@@ -2,7 +2,7 @@
  
 line = 'asdf fjdk; afed, fjek,asdf,      foo'
 
-importre
+importr
 
 re.split(r'[;,\s]\s*', line)
 ['asdf', 'fjdk', 'afed', 'fjek', 'asdf', 'foo']
