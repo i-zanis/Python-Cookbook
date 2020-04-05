@@ -5,6 +5,7 @@ class RPCHandler:
     self._functions = { }460 
       def register_function(self, func):
         self._functions[func.__name__] = funcdef handle_connection(self, connection):
+          
           try:while True:
             # Receive a message
             func_name, args, kwargs = json.loads(connection.recv())
