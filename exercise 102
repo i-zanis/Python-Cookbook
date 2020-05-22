@@ -4,7 +4,6 @@ text.rjust(20)'         Hello World'
 text.center(20)'    Hello World     '
 
 
-
 "Hello World"
 text.ljust(20) "Hello World
 text.center(20)
